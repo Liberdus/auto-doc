@@ -3,7 +3,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import * as fs from 'fs/promises';
 import * as path from 'path';
 
-const geminiApiKey = "AIzaSyB0gm-Th-v34n8ydSvN855WI6Cr4Ch0qss"; 
+const geminiApiKey = process.env.GEMINI_API_KEY; 
 const googleAI = new GoogleGenerativeAI(geminiApiKey);
 
 async function processDirectory(directory: string): Promise<string> {
